@@ -1,4 +1,6 @@
-import Root from "./routes/root";
+import App from './App';
+import Register from './routes/register';
+import ErrorPage from './routes/error-page'
 import {
   createBrowserRouter,
 } from "react-router-dom";
@@ -6,6 +8,11 @@ import {
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
